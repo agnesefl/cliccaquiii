@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuto</title>
+    <link rel="stylesheet" href="stylesn.css">
+</head>
+<body class="benvenuto">
+    <body style="background-image: url('destino.png'); background-size: cover; background-repeat: no-repeat;"></body>
+    <h1 id="welcomeMessage">ti tocca questo....</h1>
+<h2> ci teniamo a ricordarVi l'esistenza della helpline</h2>
+    <a href="destino.html">Torna alla pagina precedente</a>
+
+    <script>
+        // Ottieni il nome dall'URL e personalizza il messaggio
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get('nome');
+        if (nome) {
+            document.getElementById('welcomeMessage').textContent = `Benvenuto, ${nome}!`;
+        }
+    </script>
+</body>
+</html>

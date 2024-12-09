@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserisci il tuo nome</title>
+    <link rel="stylesheet" href="stylesn.css">
+</head>
+<body class="destino">
+    <h1>INSERISCI QUI:nome <br> Cosa ti porta il destino?</h1>
+    <form id="nameForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Scrivi il tuo nome" required>
+        <button type="submit">Invia</button>
+    </form>
+    <h1> <br><br><br></h1>
+    <a href="index.html">Torna alla Pagina Iniziale</a>
+
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene il refresh della pagina
+            const nome = document.getElementById('nome').value.trim();
+            if (nome) {
+                // Redireziona alla nuova pagina con il nome come parametro nell'URL
+                window.location.href = `benvenuto.html`;
+            } else {
+                alert("Per favore, inserisci un nome.");
+            }
+        });
+    </script>
+</body>
+</html>
